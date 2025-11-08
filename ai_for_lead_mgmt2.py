@@ -984,7 +984,7 @@ OUTPUT FORMAT:
                             st.write(exec_locals['result'])
                             df = exec_locals['result']
                      
-                            st.write(type(model))
+                            # st.write(type(model))
                             import sklearn, joblib
                             st.write("Scikit-learn:", sklearn.__version__)
                             st.write("Joblib:", joblib.__version__)
@@ -1089,6 +1089,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
