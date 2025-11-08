@@ -11,7 +11,7 @@ import ssl
 import certifi
 import uuid
 import sys
-from langchain.schema import HumanMessage
+
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 import streamlit as st
@@ -1077,4 +1077,5 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
