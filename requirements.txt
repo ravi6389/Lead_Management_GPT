@@ -1,6 +1,6 @@
 # --- Core ---
-joblib
-scikit-learn
+joblib==1.3.2
+scikit-learn==1.3.1
 openpyxl
 matplotlib 
 streamlit>=1.38.0
