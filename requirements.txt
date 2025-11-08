@@ -5,7 +5,7 @@ protobuf==5.27.2
 
 
 # --- LangChain Ecosystem (perfectly compatible set) ---
-langchain
+langchain==0.3.27
 langchain-core 
 langchain-community
 langchain-openai
