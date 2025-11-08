@@ -153,7 +153,8 @@ def execute_filter_code(query):
     global df_activities
     st.write(f' I am in execute filter code and query is.. {query}')
     prompt = PromptTemplate(input_variables=["query"], template=prompt_template2)
-    llm_chain = LLMChain(llm=llm, prompt=prompt)
+    # llm_chain = LLMChain(llm=llm, prompt=prompt)
+    llm_chain = prompt | llm
     # generated_code = llm_chain.invoke(query=query)
     # st.code(generated_code)
     # return generated_code
@@ -1076,6 +1077,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
