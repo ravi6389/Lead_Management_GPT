@@ -10,4 +10,5 @@ streamlit-chat
 
 langchainhub
 langchain_groq
+langchain-core
 
