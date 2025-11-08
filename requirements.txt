@@ -10,5 +10,6 @@ streamlit-chat
 
 langchainhub==0.1.20
 langchain-groq==0.2.2
+joblib
 
 
