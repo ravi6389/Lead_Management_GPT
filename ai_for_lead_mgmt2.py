@@ -101,7 +101,7 @@ llm = ChatGroq(temperature=0.8, groq_api_key=GROQ_API_KEY,
 def load_model():
     return joblib.load('lead_scoring_model.pkl')
     # return ''
-
+global model
 model = load_model()
 
 categorical = [ 'opportunity_owner', 'company_name', 'customer_name',
@@ -976,7 +976,7 @@ OUTPUT FORMAT:
 
                         # st.write(exec(python_script['text'], {'df':df, 'pd':pd}))
                     
-                    
+                        global model
                         # If a result variable is present, display it
                         if 'result' in exec_locals:
                             st.write("### 📊 Result:")
@@ -984,7 +984,7 @@ OUTPUT FORMAT:
                             st.write(exec_locals['result'])
                             df = exec_locals['result']
                      
-                        
+                            st.write(type(model))
                             df = df.loc[:, ~df.columns.duplicated()]
 
                             X = df[feature_cols]
@@ -1086,6 +1086,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
