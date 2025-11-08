@@ -1055,18 +1055,24 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
     
 
 
-    search_agent=initialize_agent(FM_tools,llm,
-                                agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-                                handle_parsing_errors=True, verbose = True)
+    # search_agent=initialize_agent(FM_tools,llm,
+    #                             agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    #                             handle_parsing_errors=True, verbose = True)
     
-
+    search_agent = initialize_agent(
+    tools=FM_tools,
+    llm=llm,
+    agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    handle_parsing_errors=True,
+    verbose=True
+)
     
-    agent_executor = AgentExecutor.from_agent_and_tools(
-        agent=search_agent,
-        tools=FM_tools,
-        max_iterations=40,      # ← increase this
-        max_execution_time=120,  # ← or this (in seconds)
-    )
+    # agent_executor = AgentExecutor.from_agent_and_tools(
+    #     agent=search_agent,
+    #     tools=FM_tools,
+    #     max_iterations=40,      # ← increase this
+    #     max_execution_time=120,  # ← or this (in seconds)
+    # )
 
     with st.chat_message("assistant"):
         # st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=True)
@@ -1079,6 +1085,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
