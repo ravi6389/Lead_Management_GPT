@@ -5,10 +5,10 @@ protobuf==5.27.2
 
 
 # --- LangChain Ecosystem (perfectly compatible set) ---
-langchain==0.3.9
-
+langchain==0.3.27
+langchain-core ==0.3.75
 langchain-community==0.3.13
-langchain-openai==0.3.0
+langchain-openai==0.2.14
 langchain-groq==0.2.2
 langchainhub==0.1.20
 
