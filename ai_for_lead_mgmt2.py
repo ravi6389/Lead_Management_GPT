@@ -13,6 +13,7 @@ import uuid
 import sys
 
 from langchain_core.prompts import PromptTemplate
+from langchain.chains import LLMChain
 
 import streamlit as st
 import pandas as pd
