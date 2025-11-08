@@ -1,14 +1,14 @@
 # --- Core ---
 streamlit>=1.38.0
 protobuf==5.27.2
-langchain
+langchain==0.1.17
 
-langchain-community
+langchain_community
 
 langchain_openai
 streamlit-chat
 
 langchainhub
 langchain_groq
-langchain-core
+
 
