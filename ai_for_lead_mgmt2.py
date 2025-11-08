@@ -86,11 +86,11 @@ if 'df_all_contacts' not in st.session_state:
 df_grouped = ''
 df_activities = pd.DataFrame()
 df_oppt_details = pd.DataFrame()
-# os.environ['SSL_CERT_FILE'] = 'C:\\Users\\RSPRASAD\\AppData\\Local\\.certifi\\cacert.pem'
+
 
 GITHUB_API = "https://api.github.com"
 
-# GROQ_API_KEY = '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'
+
 GROQ_API_KEY = st.secrets['GROQ_API_KEY']
 llm = ChatGroq(temperature=0.8, groq_api_key=GROQ_API_KEY,
             #    model_name="llama-3.1-8b-instant", streaming=True)
@@ -1086,6 +1086,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
