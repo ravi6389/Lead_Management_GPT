@@ -24,7 +24,8 @@ from langchain.tools import tool
 
 
 # from langchain_ollama import ChatOllama
-from langchain.callbacks import StreamlitCallbackHandler
+# from langchain.callbacks import StreamlitCallbackHandler
+from langchain_community.callbacks.streamlit.streamlit_callback_handler import StreamlitCallbackHandler
 from langchain_openai import AzureChatOpenAI
 
 import re
@@ -1077,6 +1078,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
