@@ -1,6 +1,7 @@
 # --- Core ---
 joblib
 scikit-learn
+openpyxl
 streamlit>=1.38.0
 protobuf==5.27.2
 
