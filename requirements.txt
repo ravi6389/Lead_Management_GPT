@@ -1,15 +1,21 @@
 # --- Core ---
 streamlit>=1.38.0
 protobuf==5.27.2
-langchain==0.3.27
 
+
+# --- LangChain Ecosystem (perfectly compatible set) ---
+langchain==0.3.9
+langchain-core==0.3.13
 langchain-community==0.3.13
-
-langchain_openai
-streamlit-chat
-
-langchainhub==0.1.20
+langchain-openai==0.3.0
 langchain-groq==0.2.2
-joblib>=1.4.0
+langchainhub==0.1.20
+
+# --- Utilities ---
+joblib>=1.4.2
+
+
+# --- Streamlit components ---
+streamlit-chat>=0.1.1
 
 
