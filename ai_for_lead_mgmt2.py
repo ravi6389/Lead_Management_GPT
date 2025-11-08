@@ -1,4 +1,4 @@
-import joblib
+# import joblib
 import streamlit as st
 import pandas as pd
 
@@ -96,8 +96,8 @@ llm = ChatGroq(temperature=0.8, groq_api_key=GROQ_API_KEY,
             # model_name = 'groq/compound', streaming = True)
             # model_name = 'openai/gpt-oss-20b')
 def load_model():
-    return joblib.load('lead_scoring_model.pkl')
-
+    # return joblib.load('lead_scoring_model.pkl')
+    return ''
 
 model = load_model()
 
@@ -1076,6 +1076,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
