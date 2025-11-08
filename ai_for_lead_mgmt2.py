@@ -4,8 +4,7 @@ import pandas as pd
 import pandas as pd
 from io import StringIO
 import io
-# import snowflake.connector as sf
-# from snowflake.snowpark import Session
+
 import os
 import ssl
 import certifi
@@ -26,8 +25,7 @@ from langchain.chains import LLMChain
 # from langchain_ollama import ChatOllama
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain_openai import AzureChatOpenAI
-import snowflake.connector as sf
-from snowflake.snowpark import Session
+
 import re
 from datetime import datetime
 from typing import Tuple
@@ -1077,6 +1075,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
