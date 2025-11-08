@@ -13,7 +13,7 @@ import uuid
 import sys
 
 from langchain_core.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from langchain_core.chains import LLMChain
 import streamlit as st
 import pandas as pd
 import os
@@ -1077,6 +1077,7 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
         st.session_state.messages.append({'role':'assistant',"content":response})
         st.write(response)
         # st.write(matched_cols)
+
 
 
 
